@@ -1,0 +1,26 @@
+type Student {
+  data: [Student]
+  
+}
+type Error{
+    error:String
+}
+union Result=Student|Error;
+type Query {
+  students: Result
+}
+type Student {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  bloodGroup: String!
+  grade: String!
+  teacher: Teacher
+}
+type Teacher {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  bloodGroup: String!
+  empId: String!
+}
